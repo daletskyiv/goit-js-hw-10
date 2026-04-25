@@ -1,0 +1,79 @@
+.date-input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.start-button:disabled {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  font-weight: 500;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #989898;
+  background-color: #cfcfcf;
+}
+
+.start-button:not(:disabled) {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  font-weight: 500;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  transition: bacbackground-color, 250ms, linear;
+}
+
+.start-button:not(:disabled):hover,
+.start-button:not(:disabled):focus {
+  background-color: #6c8cff;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.field {
+  position: relative;
+  min-width: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.field:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  transform: translateX(calc(100% + 5px));
+  font-size: 40px;
+}
+
+.value {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
