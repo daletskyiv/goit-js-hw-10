@@ -1,0 +1,36 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+fieldset label {
+  flex-direction: row;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 24px;
+}
+
+.submit-btn {
+  height: 40px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #4e75ff;
+}
