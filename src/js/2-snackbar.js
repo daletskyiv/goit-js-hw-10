@@ -16,21 +16,21 @@ function onPromiseGeneratorSubmit(event) {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (value === 'fulfilled') {
-        resolve();
+        resolve(delay);
       } else {
-        reject();
+        reject(delay);
       }
     }, delay);
   });
 
   promise
-    .then(() => {
+    .then(delay => {
       iziToast.success({
         message: `✅ Fulfilled promise in ${delay}ms`,
         position: 'topRight',
       });
     })
-    .catch(() => {
+    .catch(delay => {
       iziToast.error({
         message: `❌ Rejected promise in ${delay}ms`,
         position: 'topRight',

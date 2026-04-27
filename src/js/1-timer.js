@@ -37,11 +37,13 @@ const options = flatpickr('#datetime-picker', {
 });
 
 function startTimer() {
+  refs.startTimerBtn.disabled = true;
+  refs.dateSelectionField.disabled = true;
   intervalId = setInterval(() => {
     const diff = userSelectedDate - Date.now();
 
     if (diff <= 0) {
-      stop();
+      stopTimer();
       refs.dateSelectionField.disabled = false;
       return;
     }
@@ -52,8 +54,6 @@ function startTimer() {
     refs.timerHours.textContent = addLeadingZero(hours);
     refs.timerMinutes.textContent = addLeadingZero(minutes);
     refs.timerSeconds.textContent = addLeadingZero(seconds);
-    refs.startTimerBtn.disabled = true;
-    refs.dateSelectionField.disabled = true;
   }, 1000);
 }
 
